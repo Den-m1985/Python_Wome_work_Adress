@@ -2,7 +2,7 @@ import operations
 import export_data
 import import_data
 import searchcontact
-import csv
+
 
 def distribute(n):
     if n == '1':
@@ -10,7 +10,8 @@ def distribute(n):
         enter = input('Нажмите Enter для завершения')
 
     elif n == '2':
-        print('Выберите формат отображения данных: 1 - Построчно; 2 - В одну строку', sep = '\n')
+        print(
+            'Выберите формат отображения данных: 1 - Построчно; 2 - В одну строку', sep='\n')
         num = int(input())
         if num == 1 or num == 2:
             operations.read_contact(num)
@@ -21,8 +22,10 @@ def distribute(n):
         если вы все данные из своего файла скопируете в файл, 
         который укажет пользователь, то это можно считать экспортом
         '''
-        file_name_expott = input('Нипишите имя файла куда вы хотите скопировать данные: ')
-        print('Выберите формат экспорта данных:', '1 - xml', '2 - json', sep='\n')
+        file_name_expott = input(
+            'Нипишите имя файла куда вы хотите скопировать данные: ')
+        print('Выберите формат экспорта данных:',
+              '1 - xml', '2 - json', sep='\n')
         num_exp = input()
         if num_exp == '1':
             export_data.export_to_xml(file_name_expott)
@@ -33,7 +36,6 @@ def distribute(n):
         else:
             print('Пожалуста, введите номер пункта меню: ')
             enter = input('Нажмите Enter для выхода в меню ')
-
         enter = input('Нажмите Enter для завершения')
 
     elif n == '4':
@@ -41,22 +43,13 @@ def distribute(n):
         считывание и сохранение, в вашу базу, записей из файла, 
         который указал пользователь
         '''
-        #file_name_import = input('Нипишите имя файла откуда вы хотите скопировать данные: ')
-        # в консоль надо вывести список файлов из которых мы будем брать определенный
-        # и добавить проверку есть ли там данные 
-        # и затем запускать метод копирования
-        
-        num = int(input('Выберете тип файла, из которого будете брать данные 1 - csv, 2 - json   '))
+        num = int(input(
+            'Выберете тип файла, из которого будете брать данные 1 - csv, 2 - json'))
         if num == 1:
-            arr1 = import_data.copy_cont()    
-            for i in range(len(arr1)):
-                with open('phonebook.csv', "a", encoding='utf-8') as fil:
-                    csv_fil = csv.writer(fil, delimiter=';')
-                    csv_fil.writerow(arr1[i])
-                    print('Данные успешно записаны')
+            arr1 = import_data.copy_cont()
+            import_data.write_csv(arr1)
         if num == 2:
             import_data.copy_cont_json()
-        
         enter = input('Нажмите Enter для завершения')
 
     elif n == '5':
