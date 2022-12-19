@@ -42,15 +42,27 @@
 Хотя, если вы все данные из своего файла скопируете в файл, который укажет пользователь, то это можно считать экспортом.
 А вот импорт - это, наоборот, считывание и сохранение, в вашу базу, записей из файла, который указал пользователь.
 
+***
+
+# Инструкция пользователя:
+1. Запуск программы с файла main.py
+2. Далее в консоле выбераем пункт и вводим нужное значение (следуем указанием которое выводится в консоле)
+3. Добавление нового контакта пункт 2. Путь программы main.py -> controller.py -> operetion.py. Запись ведется в phonebook.csv (далее "база данных")
+4. Если Вам необходимо из базы данных скопировать в файл, то выбираем пункт меню 3. Есть возможность скопировать в разные форматы. При вводе имя файла для копирования не нужно прописывать расширение.
+Путь программы main.py -> controller.py -> export_data.py.
+5. Если Вам неоходимо скопировать из стороннего файла в базу данных, то выберете пунк 4. Там необходимо ввести имя файла (без расширения) откуда мы будем копировать контакты. Для отладки программы использовались файлы: abc.csv  и  abc.json.
+Путь программы main.py -> controller.py -> import_data.py
+6. Для поиска контакта выбираем пункт 5.
+Путь программы main.py -> controller.py -> searchcontact.py 
 
 ***
-Денис Мартьянов - орг, readme, menu, operations, controller, import
+Денис Мартьянов - https://github.com/Den-m1985  -  https://t.me/Den_m1985  -  орг, readme, diagram, menu,       operations, controller, import, export
 ***
-Александр Анохин - https://github.com/Aleksandr-Anokhin   menu, operations, controller
+Александр Анохин - https://github.com/Aleksandr-Anokhin -  menu, operations, controller, export, searchcontact
 ***
-Егор Смольянинов  https://t.me/Green21Tea  
+Егор Смольянинов  - https://github.com/Egor21Green -  https://t.me/Green21Tea  import
 ***
-Валерия   - diagram, import
+Валерия - https://github.com/ValeriyaNov  -  https://t.me/valeriyanovv   - diagram, import, controller
 ***
 Denis Guzanov  https://t.me/Guzanov_event
 ***
